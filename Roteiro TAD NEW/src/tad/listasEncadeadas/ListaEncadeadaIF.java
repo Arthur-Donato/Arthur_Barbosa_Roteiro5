@@ -9,7 +9,7 @@ public interface ListaEncadeadaIF<T extends Comparable<T>> {
 	public NodoListaEncadeada<T> search(T chave);
 	public void insert(T chave);
 	public void insert(T chave, int index);
-	public NodoListaEncadeada<T> remove(T chave) throws ElementoNaoEncontradoException;
+	public NodoListaEncadeada<T> remove(T chave) throws ListaVaziaException, ElementoNaoEncontradoException;
 	/**
 	 * Existem uma conotação semântica para o imprime em ordem. É para imprimir na ordem em que
 	 * os elementos são inseridos.
@@ -32,4 +32,5 @@ public interface ListaEncadeadaIF<T extends Comparable<T>> {
 	 */
 	public T[] toArray(Class<T> clazz);
 
+	public Object getCauda();
 }
