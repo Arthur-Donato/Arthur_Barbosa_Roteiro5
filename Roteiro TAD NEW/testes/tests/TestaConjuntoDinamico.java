@@ -260,7 +260,7 @@ public class TestaConjuntoDinamico {
 	public void edgeCases_MinAndMaxIntegerValues() throws ElementoNaoEncontradoException, ConjuntoDinamicoVazioException {
 		// Teste com valores extremos
 		cd.inserir(Integer.MIN_VALUE);
-		cd.inserir(0);
+		cd.inserir(0); // Inverti a ordem de inserção do 0 para que os demais testes façam sentido.
 		cd.inserir(Integer.MAX_VALUE);
 
 		assertEquals(3, cd.tamanho());
